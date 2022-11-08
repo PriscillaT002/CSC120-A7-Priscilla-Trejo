@@ -41,7 +41,7 @@ public class House extends Building {
     residents.add(name);
 
  /*Overloads the moveIn method. Removes name from to moveIn just in case the resident decides to leave. */
- public void moveIn(){
+ public String moveIn(){
     residents.remove(name);
 
       }
