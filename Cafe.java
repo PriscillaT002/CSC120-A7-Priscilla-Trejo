@@ -28,6 +28,16 @@ public class Cafe extends Building{
         System.out.println("You have built a cafe: ☕");
     }
 
+     //Overloads the cafe method. Instead of having 50 cups we have 100 cups
+
+    public cafe(int cups){
+       cups = 100;
+
+       System.out.println("You have" + cups + "more cups");
+          }
+
+          
+
     //This method allows us to subtract the amount of coffee, sugar, and cream the user would like from our current inventory
     public void sellCoffee(int pCoffee, int pSugar, int pCream) {
 
@@ -36,11 +46,9 @@ public class Cafe extends Building{
         nCreams -= pCream;
 
     }
-        /*Overloads the sellCoffee method. Divides our left over */
-    public void sellCoffee(int lCoffee, int lSugar, int lCream){
-        nCoffeeOunces -= lCoffee /2 ;
-        nSugarPackets -= lSugar /2 ;
-        nCreams -= lCream /2 ;
+        /*Overloads the sellCoffee method. Subtracts from our cup inventory rather than each ingredient for a cup of coffee*/
+    public void sellCoffee(int pCups){
+        nCups -= pCups ;
           }
     
 
