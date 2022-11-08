@@ -1,3 +1,11 @@
+
+/**
+* This file contains the data for theCampus Map file 
+* @author  Jordan Cruser, edited by Priscilla Trejo
+* @since  2022-11-1
+*/
+
+
 import java.util.ArrayList;
 
 public class CampusMap {
@@ -40,10 +48,21 @@ public class CampusMap {
         return mapString;
     }
 
+//Here I've added 10 more locations on campus for our map
     public static void main(String[] args) {
         CampusMap myMap = new CampusMap();
         myMap.addBuilding(new Building("Ford Hall", "100 Green Street Northampton, MA 01063", 4));
         myMap.addBuilding(new Building("Bass Hall", "4 Tyler Court Northampton, MA 01063", 4));
+        myMap.addBuilding(new Building("Center Campus", "100 Elm St, MA 01063", 3));
+        myMap.addBuilding(new Building("Hatfield Hall", "Hatfield Hall, MA 01063", 3));
+        myMap.addBuilding(new Building("Museum of Art", "20 Elm St, MA 01063", 4));
+        myMap.addBuilding(new Building("Nielson Library", "7 Neilson Drive, MA 01063", 4));
+        myMap.addBuilding(new Building("Ford Hall", "100 Green St, MA 01063", 4));
+        myMap.addBuilding(new Building("Dewey Hall", "Neilson Drive, MA 01063", 4));
+        myMap.addBuilding(new Building("Burton Hall", "46 College Ln, MA 01063", 4));
+        myMap.addBuilding(new Building("JMG", "60 Elm St, MA 01063", 2));
+        myMap.addBuilding(new Building("Wright Hall", "5 Chapin Way, MA 01063", 2));
+        myMap.addBuilding(new Building("Clark Hall", "Clark Hall, MA 01063", 3));
         System.out.println(myMap);
     }
     
