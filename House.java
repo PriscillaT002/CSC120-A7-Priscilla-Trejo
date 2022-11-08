@@ -13,6 +13,7 @@ public class House extends Building {
   private ArrayList<String> residents;
   private boolean hasDiningHall;
   public int nResidents;
+  public boolean hasElevator;
 
   public House(String name, String address, int nFloors) {
     super(name, address, nFloors);
@@ -61,8 +62,7 @@ public class House extends Building {
     public void moveOut(){
     residents.add(name);
       }
-
-
+      
 //This method checks to make sure the person is a resident of the building
   public boolean isResident(String person){
 
@@ -81,6 +81,19 @@ public class House extends Building {
 
         return false;
   }
+
+
+    //Overrides goToFloor method from Building class
+    @Override
+    public void goToFloor(int floorNum){
+  super.goToFloor(floorNum);
+  if (hasElevator == true){
+      System.out.println("Taking the elevator...");
+      super.goToFloor(floorNum); }
+  else{
+      System.out.println("There is not an elevator in this library");
+  }
+    }
 
   public void showOptions() {
     System.out.println("Available options at " + "This House" + ":\n + hasDiningHall() \n + moveIn() \n + moveOut() \n + Isresident() \n");

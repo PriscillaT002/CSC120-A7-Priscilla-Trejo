@@ -11,6 +11,7 @@ import java.util.Hashtable
 
 public class Library extends Building{
   Hashtable<String, Boolean> newLibrary;
+  public boolean hasElevator;
 
   public Library(String name, String address, int nFloors, String title, Boolean have) {
     super(name,address,nFloors);
@@ -79,6 +80,7 @@ public class Library extends Building{
     }
   }
 
+
   // returns true if the title is currently available, false otherwise
   public boolean isAvailable(String title, Boolean have){
     if (have == true) {
@@ -89,6 +91,19 @@ public class Library extends Building{
       return false;
     }
 
+  }
+
+
+  //Overrides goToFloor method from Building class
+  @Override
+  public void goToFloor(int floorNum){
+super.goToFloor(floorNum);
+if (hasElevator == true){
+    System.out.println("Taking the elevator...");
+    super.goToFloor(floorNum);}
+else{
+    System.out.println("There is not an elevator in this library");
+}
   }
 
   // prints out the entire collection in an easy-to-read way (including checkout status)
